@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewRecipeActivity">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/donut" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Recently Added Recipes:"
+        android:textSize="27sp"/>
+
+
+    <TextView
+        android:id="@+id/recipeNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Recipe Name:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/ingredientsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Ingredients:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/preparationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Preparation:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/personNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Your name:"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
