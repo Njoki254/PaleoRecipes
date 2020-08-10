@@ -31,6 +31,10 @@
             android:label="Category"/>
         <activity android:name=".view.detail.DetailActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
         <!--TODO #1 Add DetailActivity -->
     </application>
 
