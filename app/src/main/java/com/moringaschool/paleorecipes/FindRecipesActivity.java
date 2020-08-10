@@ -52,5 +52,6 @@ public class FindRecipesActivity extends AppCompatActivity{
         });
 
         Log.d("FindRecipesActivity", "In the onCreate method!");
+
     }
 }
