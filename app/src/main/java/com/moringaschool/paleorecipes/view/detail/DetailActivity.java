@@ -1,9 +1,4 @@
-/*-----------------------------------------------------------------------------
- - Developed by Haerul Muttaqin                                               -
- - Last modified 4/7/19 7:33 PM                                               -
- - Subscribe : https://www.youtube.com/haerulmuttaqin                         -
- - Copyright (c) 2019. All rights reserved                                    -
- -----------------------------------------------------------------------------*/
+
 package com.moringaschool.paleorecipes.view.detail;
 
 import android.content.Intent;
@@ -12,7 +7,6 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,7 +28,7 @@ import com.squareup.picasso.Picasso;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.moringaschool.paleorecipes.view.home.HomeActivity.EXTRA_DETAIL;
+import static com.moringaschool.paleorecipes.view.home.SearchActivity.EXTRA_DETAIL;
 
 public class DetailActivity extends AppCompatActivity  implements  DetailView{
      //TODO #11  implement DetailView
@@ -161,7 +155,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
         instructions.setText(meal.getStrInstructions());
         setupActionBar();
 
-        //===
+
 
         if (!meal.getStrIngredient1().isEmpty()) {
             ingredients.append("\n \u2022 " + meal.getStrIngredient1());

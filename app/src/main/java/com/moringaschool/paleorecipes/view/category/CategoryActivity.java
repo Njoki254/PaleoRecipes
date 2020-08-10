@@ -1,9 +1,4 @@
-/*-----------------------------------------------------------------------------
- - Developed by Haerul Muttaqin                                               -
- - Last modified 3/24/19 12:55 PM                                             -
- - Subscribe : https://www.youtube.com/haerulmuttaqin                         -
- - Copyright (c) 2019. All rights reserved                                    -
- -----------------------------------------------------------------------------*/
+
 package com.moringaschool.paleorecipes.view.category;
 
 import android.content.Intent;
@@ -19,7 +14,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.moringaschool.paleorecipes.R;
 import com.moringaschool.paleorecipes.adapter.ViewPagerCategoryAdapter;
 import com.moringaschool.paleorecipes.model.Categories;
-import com.moringaschool.paleorecipes.view.home.HomeActivity;
+import com.moringaschool.paleorecipes.view.home.SearchActivity;
 
 import java.util.List;
 
@@ -49,8 +44,8 @@ public class CategoryActivity extends AppCompatActivity {
     private void initIntent() {
         Intent intent = getIntent();
         List<Categories.Category> categories =
-                (List<Categories.Category>) intent.getSerializableExtra(HomeActivity.EXTRA_CATEGORY);
-        int position = intent.getIntExtra(HomeActivity.EXTRA_POSITION, 0);
+                (List<Categories.Category>) intent.getSerializableExtra(SearchActivity.EXTRA_CATEGORY);
+        int position = intent.getIntExtra(SearchActivity.EXTRA_POSITION, 0);
         
         ViewPagerCategoryAdapter adapter = new ViewPagerCategoryAdapter(
                 getSupportFragmentManager(),

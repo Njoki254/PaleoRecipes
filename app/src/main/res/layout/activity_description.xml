@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DescriptionActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cherry" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="44dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="What are Paleo Recipes?"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryText"
+        android:textFontWeight="4"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="149dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="A paleo diet typically includes lean meats, fish, fruits, vegetables, nuts and seeds,foods that in the past could be obtained by hunting and gathering."
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryText"
+        android:textFontWeight="4"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/addRecipeButton"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="231dp"
+        android:layout_marginBottom="51dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Add Recipe"
+        android:textFontWeight="4" />
+
+    <Button
+        android:id="@+id/findRecipesButton"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="51dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Find Recipes"
+        android:textFontWeight="4" />
+
+    <!--   <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Recipes Available "
+           android:id="@+id/nameTextView"
+           android:layout_centerVertical="true"
+           android:layout_centerHorizontal="true"/>-->
+
+
+</RelativeLayout>

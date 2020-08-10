@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".view.home.HomeActivity">
+    tools:context=".view.home.SearchActivity">
 
     <androidx.core.widget.NestedScrollView
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -25,15 +25,18 @@
             <!-- TextView> for Title of Header -->
             <TextView
                 android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/combo"
                 android:text="Paleo"
+                android:background="@color/colorPrimary"
                 android:textAlignment="center"
                 android:textSize="38sp"
                 android:textStyle="bold"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                />
             <!--Add Search container, not working yet though -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardSearch"
@@ -63,13 +66,13 @@
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewPagerHeader"
-                android:foregroundGravity="center"
-                android:overScrollMode="never"
-                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
                 android:layout_below="@id/cardSearch"
                 android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                android:clipToPadding="false"
+                android:foregroundGravity="center"
+                android:overScrollMode="never" />
             <!--To efficiently re-use complete layouts, you can use the <include/>
             and <merge/> tags to embed another layout inside the current layout.-->
 
@@ -101,7 +104,8 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="50dp" />
 
-             <include android:id="@+id/shimmerCategory"
+            <include
+                android:id="@+id/shimmerCategory"
                 layout="@layout/item_recycler_category_shimmer" />
 
             <TextView

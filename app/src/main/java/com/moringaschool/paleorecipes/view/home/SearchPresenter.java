@@ -1,9 +1,4 @@
-/*-----------------------------------------------------------------------------
- - Developed by Haerul Muttaqin                                               -
- - Last modified 3/17/19 5:24 AM                                              -
- - Subscribe : https://www.youtube.com/haerulmuttaqin                         -
- - Copyright (c) 2019. All rights reserved                                    -
- -----------------------------------------------------------------------------*/
+
 package com.moringaschool.paleorecipes.view.home;
 
 
@@ -18,11 +13,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-class HomePresenter {
+class SearchPresenter {
 
-    private HomeView view;
+    private SearchView view;
 
-    public HomePresenter(HomeView view) {
+    public SearchPresenter(SearchView view) {
         this.view = view;
     }
 

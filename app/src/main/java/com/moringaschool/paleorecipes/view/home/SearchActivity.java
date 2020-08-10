@@ -1,9 +1,4 @@
-/*-----------------------------------------------------------------------------
- - Developed by Haerul Muttaqin                                               -
- - Last modified 3/17/19 5:24 AM                                              -
- - Subscribe : https://www.youtube.com/haerulmuttaqin                         -
- - Copyright (c) 2019. All rights reserved                                    -
- -----------------------------------------------------------------------------*/
+
 package com.moringaschool.paleorecipes.view.home;
 
 import android.content.Intent;
@@ -11,7 +6,6 @@ import android.os.Bundle;
 
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -33,7 +27,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomeActivity extends AppCompatActivity implements com.moringaschool.paleorecipes.view.home.HomeView {
+public class SearchActivity extends AppCompatActivity implements SearchView {
 
     public static final String EXTRA_CATEGORY = "category";
     public static final String EXTRA_POSITION = "position";
@@ -44,7 +38,7 @@ public class HomeActivity extends AppCompatActivity implements com.moringaschool
     @BindView(R.id.recyclerCategory)
     RecyclerView recyclerViewCategory;
 
-    com.moringaschool.paleorecipes.view.home.HomePresenter presenter;
+    SearchPresenter presenter;
 
     @Override
 
@@ -53,7 +47,7 @@ public class HomeActivity extends AppCompatActivity implements com.moringaschool
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
 
-        presenter = new com.moringaschool.paleorecipes.view.home.HomePresenter(this);
+        presenter = new SearchPresenter(this);
         presenter.getMeals();
         presenter.getCategories();
     }
