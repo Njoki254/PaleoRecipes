@@ -5,7 +5,7 @@ package com.moringaschool.paleorecipes.view.detail;
 
 import androidx.annotation.NonNull;
 
-import com.moringaschool.paleorecipes.api.Utils;
+import com.moringaschool.paleorecipes.network.Utils;
 import com.moringaschool.paleorecipes.model.Meals;
 
 import retrofit2.Call;

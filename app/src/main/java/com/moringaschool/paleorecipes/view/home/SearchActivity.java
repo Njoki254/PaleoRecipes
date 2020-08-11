@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.moringaschool.paleorecipes.R;
-import com.moringaschool.paleorecipes.api.Utils;
+import com.moringaschool.paleorecipes.network.Utils;
 import com.moringaschool.paleorecipes.adapters.RecyclerViewHomeAdapter;
 //import com.moringaschool.paleorecipes.adapter.ViewPagerHeaderAdapter;
 import com.moringaschool.paleorecipes.adapters.ViewPagerHeaderAdapter;

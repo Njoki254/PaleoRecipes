@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.moringaschool.paleorecipes.R;
-import com.moringaschool.paleorecipes.api.Utils;
+import com.moringaschool.paleorecipes.network.Utils;
 import com.moringaschool.paleorecipes.adapters.RecyclerViewMealByCategory;
 import com.moringaschool.paleorecipes.model.Meals;
 import com.moringaschool.paleorecipes.view.detail.DetailActivity;

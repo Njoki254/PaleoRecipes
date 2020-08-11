@@ -1,5 +1,5 @@
 
-package com.moringaschool.paleorecipes.api;
+package com.moringaschool.paleorecipes.network;
 
 import com.moringaschool.paleorecipes.model.Categories;
 import com.moringaschool.paleorecipes.model.Meals;

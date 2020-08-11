@@ -1,11 +1,8 @@
 
-package com.moringaschool.paleorecipes.api;
+package com.moringaschool.paleorecipes.network;
 
 import android.app.AlertDialog;
 import android.content.Context;
-
-import com.moringaschool.paleorecipes.api.FoodApi;
-import com.moringaschool.paleorecipes.api.FoodClient;
 
 public class Utils {
 
