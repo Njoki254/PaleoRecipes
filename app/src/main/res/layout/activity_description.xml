@@ -42,6 +42,7 @@
         android:textColor="@color/colorPrimaryText"
         android:backgroundTint="@color/colorPrimary"
         android:textFontWeight="4"
+        android:textStyle="bold"
         android:textSize="20sp" />
 
     <Button
