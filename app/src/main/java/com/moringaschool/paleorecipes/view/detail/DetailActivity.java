@@ -48,8 +48,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
     @BindView(R.id.category)
     TextView category;
     
-    @BindView(R.id.country)
-    TextView country;
+
     
     @BindView(R.id.instructions)
     TextView instructions;
@@ -63,12 +62,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
     
-    @BindView(R.id.youtube)
-    TextView youtube;
-    
-    @BindView(R.id.source)
-    TextView source;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -151,7 +145,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
         Picasso.get().load(meal.getStrMealThumb()).into(mealThumb);
         collapsingToolbarLayout.setTitle(meal.getStrMeal());
         category.setText(meal.getStrCategory());
-        country.setText(meal.getStrArea());
+
         instructions.setText(meal.getStrInstructions());
         setupActionBar();
 
@@ -280,17 +274,6 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
         }
 
 
-        youtube.setOnClickListener(v -> {
-            Intent intentYoutube = new Intent(Intent.ACTION_VIEW);
-            intentYoutube.setData(Uri.parse(meal.getStrYoutube()));
-            startActivity(intentYoutube);
-        });
-
-        source.setOnClickListener(v -> {
-            Intent intentSource = new Intent(Intent.ACTION_VIEW);
-            intentSource.setData(Uri.parse(meal.getStrSource()));
-            startActivity(intentSource);
-        });
 
     }
     @Override

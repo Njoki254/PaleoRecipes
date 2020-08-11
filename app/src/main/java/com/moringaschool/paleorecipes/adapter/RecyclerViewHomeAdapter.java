@@ -45,7 +45,7 @@ public class RecyclerViewHomeAdapter extends RecyclerView.Adapter<RecyclerViewHo
     public void onBindViewHolder(@NonNull RecyclerViewHomeAdapter.RecyclerViewHolder viewHolder, int i) {
 
         String strCategoryThum = categories.get(i).getStrCategoryThumb();
-        Picasso.get().load(strCategoryThum).placeholder(R.drawable.ic_circle).into(viewHolder.categoryThumb);
+        Picasso.get().load(strCategoryThum).placeholder(R.drawable.round).into(viewHolder.categoryThumb);
 
         String strCategoryName = categories.get(i).getStrCategory();
         viewHolder.categoryName.setText(strCategoryName);

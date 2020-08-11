@@ -14,46 +14,55 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardCategory"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="10dp"
-                app:cardBackgroundColor="@color/colorPrimary"
-                android:foreground="?attr/selectableItemBackground">
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorIcons"
+                app:cardCornerRadius="10dp">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <ImageView
                         android:id="@+id/imageCategoryBg"
 
-                        android:scaleType="centerCrop"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
                     <ImageView
-                        android:background="#D9770202"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:background="#5AAEA6" />
+
                     <ImageView
                         android:id="@+id/imageCategory"
 
                         android:layout_width="160dp"
                         android:layout_height="160dp"
-                        android:scaleType="fitStart"
-                        android:padding="16dp"/>
+                        android:padding="16dp"
+                        android:scaleType="fitStart" />
+
                     <TextView
                         android:id="@+id/textCategory"
-                        android:layout_toRightOf="@id/imageCategory"
-                        android:layout_toEndOf="@id/imageCategory"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:maxLines="7"
+                        android:layout_toEndOf="@id/imageCategory"
+                        android:layout_toRightOf="@id/imageCategory"
                         android:ellipsize="end"
+                        android:maxLines="7"
+                        android:padding="16dp"
+                        android:text="@string/meal_categories"
                         android:textColor="@color/colorWhite"
-                        android:textSize="15sp"
-                        android:text="@string/meal_categories"/>
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
             <androidx.recyclerview.widget.RecyclerView

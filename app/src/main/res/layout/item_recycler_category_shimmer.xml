@@ -40,7 +40,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:padding="5dp"
-                        android:src="@drawable/ic_circle" />
+                        android:src="@drawable/round" />
 
                     <View
                         android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:padding="5dp"
-                        android:src="@drawable/ic_circle" />
+                        android:src="@drawable/round" />
 
                     <View
                         android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:padding="5dp"
-                        android:src="@drawable/ic_circle" />
+                        android:src="@drawable/round" />
 
                     <View
                         android:layout_width="match_parent"
@@ -156,7 +156,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:padding="5dp"
-                        android:src="@drawable/ic_circle" />
+                        android:src="@drawable/round" />
 
                     <View
                         android:layout_width="match_parent"
@@ -192,7 +192,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:padding="5dp"
-                        android:src="@drawable/ic_circle" />
+                        android:src="@drawable/round" />
 
                     <View
                         android:layout_width="match_parent"
@@ -228,7 +228,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:padding="5dp"
-                        android:src="@drawable/ic_circle" />
+                        android:src="@drawable/round" />
 
                     <View
                         android:layout_width="match_parent"
