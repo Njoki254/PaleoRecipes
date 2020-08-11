@@ -14,7 +14,9 @@ public class FoodClient {
     //add base url to
 
     private static final String BASE_URL = "https://www.themealdb.com/api/json/v1/1/";
-
+    //configure retrofit
+    //makes it relatively easy to retrieve and upload
+    //JSON (or other structured data) via a REST based webservice
     public static Retrofit getFoodClient() {
         return new Retrofit.Builder().baseUrl(BASE_URL)
                 .client(provideOkHttp())

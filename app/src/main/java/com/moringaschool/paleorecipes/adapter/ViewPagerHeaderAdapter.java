@@ -17,7 +17,15 @@ import com.moringaschool.paleorecipes.model.Meals;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
+//used to slide betwen fragments
+//PagerAdapter is more general than the adapters used for AdapterViews.
+// Instead of providing a View recycling mechanism directly ViewPager uses callbacks to indicate the steps taken during an update
+//When you implement a PagerAdapter, you must override the following methods at minimum:
+//
+//instantiateItem(ViewGroup, int)
+//destroyItem(ViewGroup, int, Object)
+//getCount()
+//isViewFromObject(View, Object)
 public class ViewPagerHeaderAdapter extends PagerAdapter {
 
     private List<Meals.Meal> meals;

@@ -13,7 +13,7 @@ import com.moringaschool.paleorecipes.model.Categories;
 import com.moringaschool.paleorecipes.view.category.CategoryFragment;
 
 import java.util.List;
-
+//used to slide betwen fragments
 public class ViewPagerCategoryAdapter extends FragmentPagerAdapter {
 
     private List<Categories.Category> categories;
@@ -26,6 +26,8 @@ public class ViewPagerCategoryAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int i) {
         CategoryFragment fragment = new CategoryFragment();
+
+        //add arguments to fragment
         Bundle args = new Bundle();
         args.putString("EXTRA_DATA_NAME", categories.get(i).getStrCategory());
         args.putString("EXTRA_DATA_DESC", categories.get(i).getStrCategoryDescription());

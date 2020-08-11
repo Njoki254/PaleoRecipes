@@ -8,6 +8,15 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Categories implements Serializable {
+    //use a service called jsonschema2pojo (Links to an external site.) which converts a JSON response
+    // into a Plain Old Java Object (POJO). Strings and Numbers will be converted to their respective
+    // Java types, arrays will be converted to Java List objects, and nested objects will be converted to POJOs
+    //When you implement a PagerAdapter, you must override the following methods at minimum:
+    //
+    //instantiateItem(ViewGroup, int)
+    //destroyItem(ViewGroup, int, Object)
+    //getCount()
+    //isViewFromObject(View, Object)
 
     @SerializedName("categories")
     @Expose

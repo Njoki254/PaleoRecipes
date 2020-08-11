@@ -27,7 +27,7 @@
                     android:layout_height="wrap_content">
                     <ImageView
                         android:id="@+id/imageCategoryBg"
-                        android:src="@drawable/sample_image_category"
+
                         android:scaleType="centerCrop"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
@@ -37,7 +37,7 @@
                         android:layout_height="match_parent" />
                     <ImageView
                         android:id="@+id/imageCategory"
-                        android:src="@drawable/sample_image_category"
+
                         android:layout_width="160dp"
                         android:layout_height="160dp"
                         android:scaleType="fitStart"

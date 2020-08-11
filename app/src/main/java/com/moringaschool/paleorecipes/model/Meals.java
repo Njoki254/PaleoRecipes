@@ -11,10 +11,14 @@ public class Meals {
     /*Paste the generated results
      http://www.jsonschema2pojo.org/
      */
+    //use a service called jsonschema2pojo (Links to an external site.) which converts a JSON response
+    // into a Plain Old Java Object (POJO). Strings and Numbers will be converted to their respective
+    // Java types, arrays will be converted to Java List objects, and nested objects will be converted to POJOs
 
     @SerializedName("meals")
     @Expose
     private List<Meal> meals = null;
+    //function that displays all meals in the database
     public List<Meal> getMeals() {
         return meals;
     }

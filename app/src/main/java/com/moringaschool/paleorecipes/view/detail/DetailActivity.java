@@ -105,8 +105,9 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
                         PorterDuff.Mode.SRC_ATOP);
 
             } else {
-                if (toolbar.getNavigationIcon() != null)
+                if (toolbar.getNavigationIcon() != null) {
                     toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
+                }
                 favoriteItemColor.mutate().setColorFilter(getResources().getColor(R.color.colorWhite),
                         PorterDuff.Mode.SRC_ATOP);
             }
@@ -147,7 +148,6 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
 
     @Override
     public void setMeal(Meals.Meal meal) {
-       // Log.w("TAG", meal.getStrMeal());
         Picasso.get().load(meal.getStrMealThumb()).into(mealThumb);
         collapsingToolbarLayout.setTitle(meal.getStrMeal());
         category.setText(meal.getStrCategory());
@@ -155,7 +155,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
         instructions.setText(meal.getStrInstructions());
         setupActionBar();
 
-
+        //===
 
         if (!meal.getStrIngredient1().isEmpty()) {
             ingredients.append("\n \u2022 " + meal.getStrIngredient1());
@@ -292,9 +292,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
             startActivity(intentSource);
         });
 
-
     }
-
     @Override
     public void onErrorLoading(String message) {
         Utils.showDialogMessage(this,"Error", message);

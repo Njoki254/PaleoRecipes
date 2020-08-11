@@ -12,7 +12,8 @@ import com.moringaschool.paleorecipes.model.Meals;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
+// Presenter is responsible to act as the middle man between View and Model.
+// It retrieves data from the Model and returns it formatted to the View
 class SearchPresenter {
 
     private SearchView view;
@@ -23,20 +24,24 @@ class SearchPresenter {
 
     void getMeals() {
 
-        view.showLoading();
+        //line to make a request,
 
         Call<Meals> mealsCall = Utils.getApi().getMeal();
+        //waiting for callback
         mealsCall.enqueue(new Callback<Meals>() {
             @Override
+            //@NonNull indicates a variable, parameter, or return value that cannot be null.
+            //it is used to check if the results from call are empty or not
             public void onResponse(@NonNull Call<Meals> call, @NonNull Response<Meals> response) {
                 view.hideLoading();
-
+                //empty or non-empty result
                 if (response.isSuccessful() && response.body() != null) {
 
                     view.setMeal(response.body().getMeals());
 
                 }
                 else {
+                    //show error message if something goes wrong
                     view.onErrorLoading(response.message());
                 }
             }

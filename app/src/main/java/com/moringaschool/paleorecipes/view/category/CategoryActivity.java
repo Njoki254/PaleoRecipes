@@ -40,13 +40,19 @@ public class CategoryActivity extends AppCompatActivity {
         initIntent();
         
     }
+    //Init getIntent() data from home activity
+
+
+
 
     private void initIntent() {
         Intent intent = getIntent();
         List<Categories.Category> categories =
                 (List<Categories.Category>) intent.getSerializableExtra(SearchActivity.EXTRA_CATEGORY);
         int position = intent.getIntExtra(SearchActivity.EXTRA_POSITION, 0);
-        
+        //Declare fragment viewPager adapter
+        //ViewPager objects can animate screen slides automatically.
+        // used to slide between fragments
         ViewPagerCategoryAdapter adapter = new ViewPagerCategoryAdapter(
                 getSupportFragmentManager(),
                 categories);

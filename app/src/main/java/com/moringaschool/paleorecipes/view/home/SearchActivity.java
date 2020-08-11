@@ -15,6 +15,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.moringaschool.paleorecipes.R;
 import com.moringaschool.paleorecipes.Utils;
 import com.moringaschool.paleorecipes.adapter.RecyclerViewHomeAdapter;
+//import com.moringaschool.paleorecipes.adapter.ViewPagerHeaderAdapter;
 import com.moringaschool.paleorecipes.adapter.ViewPagerHeaderAdapter;
 import com.moringaschool.paleorecipes.model.Categories;
 import com.moringaschool.paleorecipes.model.Meals;
@@ -33,10 +34,15 @@ public class SearchActivity extends AppCompatActivity implements SearchView {
     public static final String EXTRA_POSITION = "position";
     public static final String EXTRA_DETAIL = "detail";
 
+    //add @BindView Annotation(1)
+    //
+
     @BindView(R.id.viewPagerHeader)
     ViewPager viewPagerMeal;
     @BindView(R.id.recyclerCategory)
     RecyclerView recyclerViewCategory;
+
+    //create variable for presenter
 
     SearchPresenter presenter;
 
@@ -45,8 +51,9 @@ public class SearchActivity extends AppCompatActivity implements SearchView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        //bind butterknife
         ButterKnife.bind(this);
-
+    //declare the presenter
         presenter = new SearchPresenter(this);
         presenter.getMeals();
         presenter.getCategories();
@@ -72,7 +79,7 @@ public class SearchActivity extends AppCompatActivity implements SearchView {
         headerAdapter.notifyDataSetChanged();
 
         headerAdapter.setOnItemClickListener((view, position) -> {
-            //TODO #8.1 make an intent to DetailActivity (get the name of the meal from the edit text view, then send the name of the meal to DetailActivity)
+            //make an intent to DetailActivity (get the name of the meal from the edit text view, then send the name of the meal to DetailActivity
             TextView mealName = view.findViewById(R.id.mealName);
             Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
             intent.putExtra(EXTRA_DETAIL, mealName.getText().toString());
@@ -88,9 +95,11 @@ public class SearchActivity extends AppCompatActivity implements SearchView {
                 GridLayoutManager.VERTICAL, false);
         recyclerViewCategory.setLayoutManager(layoutManager);
         recyclerViewCategory.setNestedScrollingEnabled(true);
+        //Notifies the attached observers that the underlying data has been changed and any View reflecting the data set should refresh itself.
         homeAdapter.notifyDataSetChanged();
 
         homeAdapter.setOnItemClickListener((view, position) -> {
+            //code for extra data intents
             Intent intent = new Intent(this, CategoryActivity.class);
             intent.putExtra(EXTRA_CATEGORY, (Serializable) category);
             intent.putExtra(EXTRA_POSITION, position);

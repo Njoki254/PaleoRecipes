@@ -20,7 +20,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
+//The view holder objects are managed by an adapter, which you create by extending RecyclerView.Adapter.
+// The adapter creates view holders as needed. The adapter also binds the view holders to their data.
 public class RecyclerViewHomeAdapter extends RecyclerView.Adapter<RecyclerViewHomeAdapter.RecyclerViewHolder> {
 
     private List<Categories.Category> categories;

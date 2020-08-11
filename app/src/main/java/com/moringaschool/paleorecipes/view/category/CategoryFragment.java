@@ -55,6 +55,8 @@ public class CategoryFragment extends Fragment implements CategoryView {
         ButterKnife.bind(this, view);
         return view;
     }
+    // getArguments with KEY
+    // set Value from argument data to view
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -89,6 +91,7 @@ public class CategoryFragment extends Fragment implements CategoryView {
 
     @Override
     public void setMeals(List<Meals.Meal> meals) {
+        //set RecyclerViewMealByCategory adapter;
         RecyclerViewMealByCategory adapter = 
                 new RecyclerViewMealByCategory(getActivity(), meals);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
@@ -97,14 +100,15 @@ public class CategoryFragment extends Fragment implements CategoryView {
         adapter.notifyDataSetChanged();
         
         adapter.setOnItemClickListener((view, position) -> {
-            //TODO #8.2 make an intent to DetailActivity (get the name of the meal from the edit text view, then send the name of the meal to DetailActivity)
-                //TODO #8.1 make an intent to DetailActivity (get the name of the meal from the edit text view, then send the name of the meal to DetailActivity)
+            //make an intent to DetailActivity (get the name of the meal from the edit text view, then send the name of the meal to DetailActivity)
+                //make an intent to DetailActivity (get the name of the meal from the edit text view, then send the name of the meal to DetailActivity)
                 TextView mealName = view.findViewById(R.id.mealName);
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
                 intent.putExtra(EXTRA_DETAIL, mealName.getText().toString());
                 startActivity(intent);
         });
     }
+
 
     @Override
     public void onErrorLoading(String message) {
