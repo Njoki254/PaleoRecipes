@@ -20,7 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.moringaschool.paleorecipes.R;
 import com.moringaschool.paleorecipes.getApi;
-import com.moringaschool.paleorecipes.adapter.RecyclerViewMealByCategory;
+import com.moringaschool.paleorecipes.adapters.RecyclerViewMealByCategory;
 import com.moringaschool.paleorecipes.model.Meals;
 import com.moringaschool.paleorecipes.view.detail.DetailActivity;
 import com.squareup.picasso.Picasso;

@@ -14,9 +14,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.moringaschool.paleorecipes.R;
 import com.moringaschool.paleorecipes.getApi;
-import com.moringaschool.paleorecipes.adapter.RecyclerViewHomeAdapter;
+import com.moringaschool.paleorecipes.adapters.RecyclerViewHomeAdapter;
 //import com.moringaschool.paleorecipes.adapter.ViewPagerHeaderAdapter;
-import com.moringaschool.paleorecipes.adapter.ViewPagerHeaderAdapter;
+import com.moringaschool.paleorecipes.adapters.ViewPagerHeaderAdapter;
 import com.moringaschool.paleorecipes.model.Categories;
 import com.moringaschool.paleorecipes.model.Meals;
 import com.moringaschool.paleorecipes.view.category.CategoryActivity;

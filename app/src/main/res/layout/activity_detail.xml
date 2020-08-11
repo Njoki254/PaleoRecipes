@@ -116,9 +116,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
                 android:gravity="center_vertical"
-                android:drawablePadding="10dp"
-                android:drawableEnd="@drawable/ic_info"
-                android:drawableRight="@drawable/ic_info" />
+                android:drawablePadding="10dp" />
             
             <androidx.cardview.widget.CardView
                 app:cardUseCompatPadding="true"

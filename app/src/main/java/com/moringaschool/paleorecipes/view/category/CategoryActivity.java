@@ -12,7 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 import com.moringaschool.paleorecipes.R;
-import com.moringaschool.paleorecipes.adapter.ViewPagerCategoryAdapter;
+import com.moringaschool.paleorecipes.adapters.ViewPagerCategoryAdapter;
 import com.moringaschool.paleorecipes.model.Categories;
 import com.moringaschool.paleorecipes.view.home.SearchActivity;
 

@@ -1,5 +1,5 @@
 
-package com.moringaschool.paleorecipes.adapter;
+package com.moringaschool.paleorecipes.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
