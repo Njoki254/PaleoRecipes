@@ -30,7 +30,7 @@ import butterknife.ButterKnife;
 import static com.moringaschool.paleorecipes.view.home.SearchActivity.EXTRA_DETAIL;
 
 public class DetailActivity extends AppCompatActivity  implements  DetailView{
-     //TODO #11  implement DetailView
+     //implement DetailView
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -70,12 +70,13 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
 
         setupActionBar();
         
-        //TODO #9 Get data from the intent
+        //Get data from the intent
         Intent intent = getIntent();
         String mealName =intent.getStringExtra(EXTRA_DETAIL);
+
         DetailPresenter presenter = new DetailPresenter(this);
 
-        //TODO #10 Declare the presenter (put the name of the meal name from the data intent to the presenter)
+        //Declare the presenter (put the name of the meal name from the data intent to the presenter)
         
     }
 
@@ -101,8 +102,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
                 if (toolbar.getNavigationIcon() != null) {
                     toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
                 }
-                favoriteItemColor.mutate().setColorFilter(getResources().getColor(R.color.colorWhite),
-                        PorterDuff.Mode.SRC_ATOP);
+
             }
         });
     }
