@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.moringaschool.paleorecipes.R;
-import com.moringaschool.paleorecipes.getApi;
+import com.moringaschool.paleorecipes.api.Utils;
 import com.moringaschool.paleorecipes.adapters.RecyclerViewMealByCategory;
 import com.moringaschool.paleorecipes.model.Meals;
 import com.moringaschool.paleorecipes.view.detail.DetailActivity;
@@ -112,7 +112,7 @@ public class CategoryFragment extends Fragment implements CategoryView {
 
     @Override
     public void onErrorLoading(String message) {
-        getApi.showDialogMessage(getActivity(), "Error ", message);
+        Utils.showDialogMessage(getActivity(), "Error ", message);
     }
     
     @OnClick(R.id.cardCategory)

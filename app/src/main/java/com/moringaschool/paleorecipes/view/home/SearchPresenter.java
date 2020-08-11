@@ -5,7 +5,7 @@ package com.moringaschool.paleorecipes.view.home;
 
 import androidx.annotation.NonNull;
 
-import com.moringaschool.paleorecipes.getApi;
+import com.moringaschool.paleorecipes.api.Utils;
 import com.moringaschool.paleorecipes.model.Categories;
 import com.moringaschool.paleorecipes.model.Meals;
 
@@ -26,7 +26,7 @@ class SearchPresenter {
 
         //line to make a request,
 
-        Call<Meals> mealsCall = getApi.getApi().getMeal();
+        Call<Meals> mealsCall = Utils.getApi().getMeal();
         //waiting for callback
         mealsCall.enqueue(new Callback<Meals>() {
             @Override
@@ -59,7 +59,7 @@ class SearchPresenter {
 
         view.showLoading();
 
-        Call<Categories> categoriesCall = getApi.getApi().getCategories();
+        Call<Categories> categoriesCall = Utils.getApi().getCategories();
         categoriesCall.enqueue(new Callback<Categories>() {
             @Override
             public void onResponse(@NonNull Call<Categories> call,

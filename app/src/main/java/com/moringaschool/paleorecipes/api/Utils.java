@@ -1,5 +1,5 @@
 
-package com.moringaschool.paleorecipes;
+package com.moringaschool.paleorecipes.api;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.content.Context;
 import com.moringaschool.paleorecipes.api.FoodApi;
 import com.moringaschool.paleorecipes.api.FoodClient;
 
-public class getApi {
+public class Utils {
 
     public static FoodApi getApi() {
         return FoodClient.getFoodClient().create(FoodApi.class);

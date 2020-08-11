@@ -4,9 +4,6 @@
 
 Njoki Kamau
 
-
-
-
  ## Project Description
 This is an android studio project that meets the following requirements:
 - Has 5 different activities one can navigate to

@@ -4,7 +4,7 @@ package com.moringaschool.paleorecipes.view.category;
 
 import androidx.annotation.NonNull;
 
-import com.moringaschool.paleorecipes.getApi;
+import com.moringaschool.paleorecipes.api.Utils;
 import com.moringaschool.paleorecipes.model.Meals;
 
 import retrofit2.Call;
@@ -21,7 +21,7 @@ public class CategoryPresenter {
     void getMealByCategory(String category) {
         
         view.showLoading();
-        Call<Meals> mealsCall = getApi.getApi().getMealByCategory(category);
+        Call<Meals> mealsCall = Utils.getApi().getMealByCategory(category);
         mealsCall.enqueue(new Callback<Meals>() {
             @Override
             public void onResponse(@NonNull Call<Meals> call, @NonNull Response<Meals> response) {
