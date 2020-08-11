@@ -24,6 +24,7 @@
         android:layout_marginEnd="44dp"
         android:fontFamily="@font/roboto_medium"
         android:text="What are Paleo Recipes?"
+        android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryText"
         android:textFontWeight="4"
@@ -35,11 +36,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="149dp"
-        android:fontFamily="@font/roboto_medium"
+        android:fontFamily="@font/combo"
         android:text="A paleo diet typically includes lean meats, fish, fruits, vegetables, nuts and seeds,foods that in the past could be obtained by hunting and gathering."
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryText"
+        android:backgroundTint="@color/colorPrimary"
         android:textFontWeight="4"
+        android:textStyle="bold"
         android:textSize="20sp" />
 
     <Button

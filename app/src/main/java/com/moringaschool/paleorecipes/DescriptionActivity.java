@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.moringaschool.paleorecipes.view.home.SearchActivity;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -40,7 +42,7 @@ public class DescriptionActivity extends AppCompatActivity implements View.OnCli
             startActivity(intent);
         }
         else if(v == mFindRecipesButton) {
-            Intent intent = new Intent(DescriptionActivity.this, FindRecipesActivity.class);
+            Intent intent = new Intent(DescriptionActivity.this, SearchActivity.class);
             // intent.putExtra("name", name);
             startActivity(intent);
         }

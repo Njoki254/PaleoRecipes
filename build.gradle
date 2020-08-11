@@ -4,6 +4,11 @@ buildscript {
         google()
         jcenter()
     }
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile){
+            options.compilerArgs << "-XLint:deprecation"
+        }
+    }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
 
