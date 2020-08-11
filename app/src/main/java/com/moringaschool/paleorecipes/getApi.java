@@ -7,7 +7,7 @@ import android.content.Context;
 import com.moringaschool.paleorecipes.api.FoodApi;
 import com.moringaschool.paleorecipes.api.FoodClient;
 
-public class Utils {
+public class getApi {
 
     public static FoodApi getApi() {
         return FoodClient.getFoodClient().create(FoodApi.class);

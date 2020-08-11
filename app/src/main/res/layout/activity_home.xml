@@ -56,8 +56,8 @@
                     android:text="@string/search_your_recipes"
                     android:textColor="@color/colorPrimaryLight"
                     android:gravity="center_vertical"
-                    android:drawableLeft="@drawable/ic_search_primary_light"
-                    android:drawableStart="@drawable/ic_search_primary_light"
+                    android:drawableLeft="@drawable/searchicon"
+                    android:drawableStart="@drawable/searchicon"
                     android:drawablePadding="10dp"/>
             </androidx.cardview.widget.CardView>
             <!-- Add <ViewPager> with id viewPagerHeader

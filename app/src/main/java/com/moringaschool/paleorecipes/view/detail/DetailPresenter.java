@@ -5,7 +5,7 @@ package com.moringaschool.paleorecipes.view.detail;
 
 import androidx.annotation.NonNull;
 
-import com.moringaschool.paleorecipes.Utils;
+import com.moringaschool.paleorecipes.getApi;
 import com.moringaschool.paleorecipes.model.Meals;
 
 import retrofit2.Call;
@@ -27,7 +27,7 @@ public class DetailPresenter {
         //TODO #5 Call the void show loading before starting to make a request to the server
         view.showLoading();
         //TODO #6 Make a request to the server (Don't forget to hide loading when the response is received)
-        Utils.getApi().getMealByName(mealName)
+        getApi.getApi().getMealByName(mealName)
                 .enqueue((new Callback<Meals>() {
                     @Override
                     public void onResponse(@NonNull Call<Meals> call, @NonNull Response<Meals> response) {

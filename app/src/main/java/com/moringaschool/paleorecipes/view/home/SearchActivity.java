@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.moringaschool.paleorecipes.R;
-import com.moringaschool.paleorecipes.Utils;
+import com.moringaschool.paleorecipes.getApi;
 import com.moringaschool.paleorecipes.adapter.RecyclerViewHomeAdapter;
 //import com.moringaschool.paleorecipes.adapter.ViewPagerHeaderAdapter;
 import com.moringaschool.paleorecipes.adapter.ViewPagerHeaderAdapter;
@@ -109,7 +109,7 @@ public class SearchActivity extends AppCompatActivity implements SearchView {
 
     @Override
     public void onErrorLoading(String message) {
-        Utils.showDialogMessage(this, "Title", message);
+        getApi.showDialogMessage(this, "Title", message);
     }
 
 }

@@ -4,7 +4,6 @@ package com.moringaschool.paleorecipes.view.detail;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 
 import android.view.Menu;
@@ -21,7 +20,7 @@ import androidx.core.view.ViewCompat;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.moringaschool.paleorecipes.R;
-import com.moringaschool.paleorecipes.Utils;
+import com.moringaschool.paleorecipes.getApi;
 import com.moringaschool.paleorecipes.model.Meals;
 import com.squareup.picasso.Picasso;
 
@@ -278,7 +277,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
     }
     @Override
     public void onErrorLoading(String message) {
-        Utils.showDialogMessage(this,"Error", message);
+        getApi.showDialogMessage(this,"Error", message);
 
     }
 }
