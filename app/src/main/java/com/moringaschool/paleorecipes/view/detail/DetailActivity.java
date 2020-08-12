@@ -68,7 +68,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
         setContentView(R.layout.activity_detail);
         ButterKnife.bind(this);
 
-        setupActionBar();
+
         
         //Get data from the intent
         Intent intent = getIntent();
@@ -80,39 +80,13 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
         
     }
 
-    private void setupActionBar() {
-        setSupportActionBar(toolbar);
-        collapsingToolbarLayout.setContentScrimColor(getResources().getColor(R.color.colorWhite));
-        collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.colorPrimary));
-        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.colorWhite));
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-    }
-
-    void setupColorActionBarIcon(Drawable favoriteItemColor) {
-        appBarLayout.addOnOffsetChangedListener((appBarLayout, verticalOffset) -> {
-            if ((collapsingToolbarLayout.getHeight() + verticalOffset) < (2 * ViewCompat.getMinimumHeight(collapsingToolbarLayout))) {
-                if (toolbar.getNavigationIcon() != null)
-                    toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP);
-                favoriteItemColor.mutate().setColorFilter(getResources().getColor(R.color.colorPrimary),
-                        PorterDuff.Mode.SRC_ATOP);
-
-            } else {
-                if (toolbar.getNavigationIcon() != null) {
-                    toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
-                }
-
-            }
-        });
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_detail, menu);
         MenuItem favoriteItem = menu.findItem(R.id.favorite);
         Drawable favoriteItemColor = favoriteItem.getIcon();
-        setupColorActionBarIcon(favoriteItemColor);
+
         return true;
     }
 
@@ -146,7 +120,6 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
         category.setText(meal.getStrCategory());
 
         instructions.setText(meal.getStrInstructions());
-        setupActionBar();
 
         //===
 
