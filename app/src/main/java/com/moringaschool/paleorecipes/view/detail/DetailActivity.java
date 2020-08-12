@@ -68,7 +68,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
         setContentView(R.layout.activity_detail);
         ButterKnife.bind(this);
 
-
+        setupActionBar();
         
         //Get data from the intent
         Intent intent = getIntent();
@@ -78,6 +78,16 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
 
         //Declare the presenter (put the name of the meal name from the data intent to the presenter)
         
+    }
+
+    private void setupActionBar() {
+        setSupportActionBar(toolbar);
+        collapsingToolbarLayout.setContentScrimColor(getResources().getColor(R.color.colorWhite));
+        collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.colorPrimary));
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.colorWhite));
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
     }
 
 
@@ -120,6 +130,7 @@ public class DetailActivity extends AppCompatActivity  implements  DetailView{
         category.setText(meal.getStrCategory());
 
         instructions.setText(meal.getStrInstructions());
+        setupActionBar();
 
         //===
 
